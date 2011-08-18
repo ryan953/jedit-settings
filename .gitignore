@@ -6,7 +6,9 @@ jtidy/tmp/*
 plugins/ise.plugin.svn.SVNPlugin/.subversion/auth/*
 plugins/projectviewer.ProjectPlugin/projects/*
 plugins/projectviewer.ProjectPlugin/pv.xml
+CtagsInterface/*
 settings-backup/*
+headline/cache/*
 macros/.macroManagerCache
 killring.xml
 perspective.xml

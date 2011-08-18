@@ -1,17 +1,17 @@
 #jEdit Editor Scheme
 #:mode=properties:lineSeparator=\n:
-#Wed Jun 22 16:04:15 EDT 2011
+#Mon Jul 18 09:44:58 EDT 2011
 view.style.keyword2=color\:\#009966 style\:b
 view.style.keyword1=color\:\#f0e68c style\:b
 view.style.literal4=color\:\#ffffff
 view.style.literal3=color\:\#ffcc00
-view.style.literal2=color\:\#cc6600
 console.font=monospaced
+view.style.literal2=color\:\#cc6600 
 view.style.literal1=color\:\#ffa0a0
 white-space.whitespace-color=\#ff6600
 view.style.comment4=color\:\#cc6600
-view.style.digit=color\:\#cc3300
 view.style.comment3=color\:\#999900 
+view.style.digit=color\:\#cc3300
 scheme.name=dessert-ryan
 view.style.comment2=color\:\#cd5c5c
 view.style.comment1=color\:\#87ceeb
@@ -21,13 +21,13 @@ view.gutter.noFocusBorderColor=\#ffffff
 view.gutter.structureHighlightColor=\#cccccc
 white-space.tab-color=\#4b5952
 white-space.block-color=\#006633
-jdiff.overview-changed-color=\#ffcc66
+jdiff.overview-changed-color=\#0033cc
 console.plainColor=\#000000
-error-list.warningColor=\#ffa800
 view.style.markup=color\:\#bdb76b
+error-list.warningColor=\#ffa800
 jdiff.overview-inserted-color=\#99cc66
 console.caretColor=
-jdiff.left-cursor-color=
+jdiff.left-cursor-color=\#000000
 view.gutter.fgColor=\#ffffff
 view.gutter.bgColor=\#282828
 view.style.function=color\:\#98fb98
@@ -45,7 +45,7 @@ view.gutter.currentLineColor=\#66cc00
 white-space.fold-color=\#595959
 white-space.space-color=\#4b5952
 view.wrapGuideColor=\#8080ff
-view.style.label=color\:\#ffdead style\:i
+view.style.label=color\:\#ffdead 
 view.style.invalid=color\:\#ff0066 bgColor\:\#ffffcc
 view.status.memory.foreground=\#cccccc
 jdiff.overview-invalid-color=\#cccccc
@@ -56,7 +56,7 @@ console.fontstyle=0
 view.gutter.focusBorderColor=\#99ccff
 view.selectionColor=\#537017
 console.infoColor=\#009600
-jdiff.right-cursor-color=
+jdiff.right-cursor-color=\#000000
 console.bgColor=\#ffffff
 jdiff.overview-deleted-color=\#ff6666
 view.gutter.markerColor=\#006666
