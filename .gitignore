@@ -1,3 +1,18 @@
+*.tmp
+history
+cache/*
+jars-cache/*
+jtidy/tmp/*
+plugins/ise.plugin.svn.SVNPlugin/.subversion/auth/*
+plugins/projectviewer.ProjectPlugin/projects/*
+plugins/projectviewer.ProjectPlugin/pv.xml
+settings-backup/*
+macros/.macroManagerCache
+killring.xml
+perspective.xml
+recent.xml
+server
+
 # Compiled source #
 ###################
 *.com

@@ -1,0 +1,32 @@
+function.apply(this, [arg, arg2])
+function.call(this, arg, arg2)
+
+sprintf(T_('The story of %s'), $author)
+
+for (var key in obj) {  
+  if (obj.hasOwnProperty(key)) {  
+    f.call(opt_obj, obj[key], key, obj);  
+  }  
+}  
+
+var outerPane = $details.find(".details-pane-outer"),
+    didScroll = false;
+$(window).scroll(function() {
+    didScroll = true;
+});
+setInterval(function() {
+    if ( didScroll ) {
+        didScroll = false;
+        // Check your page position and then
+        // Load in more results
+    }
+}, 250);
+
+utf8_general_ci
+
+
+
+
+
+	$ENV_eventNotification_user = 'eventEmail';
+	$ENV_eventNotification_password = 'sekret';

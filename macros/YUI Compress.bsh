@@ -1,0 +1,31 @@
+void execScript(interpreter, command)
+{
+	params = Macros.input(view,
+		"Specify parameters for running script under " + interpreter);
+	if(params == null)
+	{
+		Macros.message(view, "Script execution was cancelled.");
+		return;
+	}
+
+}
+
+void runScript()
+{
+	if(buffer.isNewFile()) {
+		buffer.saveAs(view, true);
+	} else {
+		buffer.save(view, buffer.getPath());
+	}
+	mode = buffer.getMode().getName();
+	path = buffer.getPath() + " ";
+	outpath = path.replace(buffer.getName(), "min\\" + buffer.getName());
+
+	if(mode.equals("js") || mode.equals("css") || mode.equals("javascript")) {
+		runInSystemShell(view, "java -jar C:/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar --charset utf8 -v -o " + outpath + " " + path);
+	} else {
+		Macros.error(view, "Can't compress the current file");
+	}
+}
+
+runScript();

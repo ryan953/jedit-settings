@@ -1,0 +1,41 @@
+void runScript() {
+	vhost_name = Macros.input(view, "Specifiy name of new vhost");
+	if(vhost_name == null) { return; }
+
+	hostFilePath = "C:\\WINDOWS\\System32\\drivers\\etc\\hosts";
+
+	jEdit.openFile(view, hostFilePath);
+	VFSManager.waitForRequests();
+	_buffer = jEdit.getBuffer(hostFilePath);
+	textArea.goToBufferEnd(false);
+	textArea.insertEnterAndIndent();
+	textArea.setSelectedText("192.168.10.41 " + vhost_name + ".dev");
+	_buffer.save(view, hostFilePath);
+	jEdit.closeBuffer(editPane, _buffer);
+
+
+	confFilePath = "sftp://root@a51s04.alpha51.net:22/etc/httpd/conf/vhosts/dev/" + vhost_name + ".dev.conf";
+	confText = "<VirtualHost *:80>\n";
+	confText += "	DocumentRoot \"/var/www/html/www/dev/" + vhost_name + "\"\n";
+	confText += "	ServerName " + vhost_name + ".dev\n";
+	confText += "	<Directory \"/var/www/html/www/dev/" + vhost_name + "\">\n";
+	confText += "		allow from all\n";
+	confText += "		Order Allow,deny\n";
+	confText += "	</Directory>\n";
+	confText += "</VirtualHost>";
+
+	_buffer = jEdit.newFile(view);
+	textArea.goToBufferEnd(false);
+	textArea.insertEnterAndIndent();
+	textArea.setSelectedText(confText);
+	_buffer.save(view, confFilePath);
+	jEdit.closeBuffer(editPane, _buffer);
+
+	//make the directory
+	//restart apache!
+
+	Macros.message(view, "VHOST " + vhost_name + ".dev Created\nDon't forget to RESTART APACHE");
+	return;
+}
+
+runScript();
